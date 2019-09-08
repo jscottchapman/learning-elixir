@@ -1,6 +1,6 @@
 defmodule Sample.Enum do
     import Kernel, except: [length: 1]
-    
+
     def first( lists, val \\ nil)
     def first([head | _], val), do: head
     def first([], val), do: val
@@ -20,7 +20,7 @@ defmodule Sample.Enum do
     end
 
     def length([]), do: 0
-    def length([_, tail]),
+    def length([_ | tail]),
         do: 1 + length(tail)        
         
 end
